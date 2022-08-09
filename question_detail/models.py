@@ -1,6 +1,9 @@
 from django.db import models
+from question_list.models import QuestionList
 
 
 class Question(models.Model):
     text = models.CharField(max_length=1000)
     answer = models.DecimalField(decimal_places=3, max_digits=13)
+    question_group = models.ForeignKey(QuestionList, on_delete=models.CASCADE)
+    position = models.IntegerField()
