@@ -7,3 +7,6 @@ class Question(models.Model):
     answer = models.DecimalField(decimal_places=3, max_digits=13)
     question_group = models.ForeignKey(QuestionList, on_delete=models.CASCADE)
     position = models.IntegerField()
+
+    def __str__(self):
+        return self.text
