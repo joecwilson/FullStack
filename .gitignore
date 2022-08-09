@@ -1,3 +1,5 @@
 .venv/
 node_modules/
 .idea/
+db.sqlite3
+/FullStack/__pycache__/
