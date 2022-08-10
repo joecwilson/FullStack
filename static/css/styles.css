@@ -1,28 +1,47 @@
 html {
   font-size:16pt;
+    background-color: #1b1b1b;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 25% 25% 25% 25% ;
 }
 
 .logo {
     width: 4rem;
     height: 4rem;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 0;
     margin: 3rem auto 3rem auto;
+    color: #AA8E3C;
 }
 
 .title {
-    grid-column: 2 / span 3;
-    background-color: lightblue;
+    grid-column: 2 / span 2;
+    background-color: #333;
     padding: 3rem 0 3rem 0;
     border-radius: 1rem;
 }
 
-h1 {
-    color: darkred;
+.card {
+    background-color: #333;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     text-align: center;
+    color:white;
+}
+
+h1 {
+    color: #AA5A3C;
+    text-align: center;
+}
+
+button {
+    background-color: #2B526D;
+    color:white;
+    border:none;
+    font-size: 1rem;
+    padding: 0.5rem
 }

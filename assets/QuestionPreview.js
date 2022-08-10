@@ -4,7 +4,7 @@ import React from 'react';
 export default function QuestionPreview({first_question,group_title}){
 
     return(
-        <div>
+        <div className="card">
             <h2>
                 {group_title}
             </h2>
