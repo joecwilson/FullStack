@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
+import Header from './Header.js'
 
 export default function App(){
     return(
-        <div>
-            <h1>Is this using the new app</h1>
+        <div >
+            <Header></Header>
         </div>
     )
 }
