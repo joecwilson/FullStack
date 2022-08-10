@@ -1,11 +1,13 @@
 {% load static %}
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Getting Started with Django and Webpack</title>
+      <meta charset="UTF-8">
+      <title>Getting Started with Django and Webpack</title>
+      <link rel="stylesheet" href="{% static 'styles.css' %}">
   </head>
   <body>
-    <div id="root" />
+    <div id="root"></div>
     <script src="{% static 'index-bundle.js' %}"></script>
   </body>
 </html>
