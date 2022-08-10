@@ -36,15 +36,10 @@ export default function QuestionGroupView(){
     ]
      const listItems = questionGroups.map(group =>
         <div key={group.id}>
-            <h2>
-                {group.group_title}
-            </h2>
-            <p>
-                {group.first_question}
-            </p>
-            <button>
-                Do this group
-            </button>
+            <QuestionPreview
+                first_question = {group.first_question}
+                group_title = {group.group_title}
+            />
         </div>
       );
 

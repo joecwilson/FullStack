@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function QuestionPreview(first_question,group_title){
+export default function QuestionPreview({first_question,group_title}){
 
     return(
         <div>
