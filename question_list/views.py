@@ -1,9 +1,7 @@
 from django.views.generic import ListView
 from .models import QuestionList
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from .serializers import QuestionListSerializer
-
-# Create your views here.
 
 
 class QuestionGroupView(ListView):
@@ -11,8 +9,11 @@ class QuestionGroupView(ListView):
     template_name = 'index.html'
 
 
-# Create your views here.
+class ListQuestionList(generics.ListAPIView):
+    serializer_class = QuestionListSerializer
+    queryset = QuestionList.objects.all()
 
-class QuestionListAPI(viewsets.ModelViewSet):
+
+class DetailQuestionList(generics.RetrieveAPIView):
     serializer_class = QuestionListSerializer
     queryset = QuestionList.objects.all()

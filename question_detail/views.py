@@ -4,6 +4,4 @@ from .serializers import QuestionSerializer
 
 
 # Create your views here.
-class QuestionAPIView(generics.ListAPIView):
-    serializer_class = QuestionSerializer
-    queryset = Question.objects.all()
+
