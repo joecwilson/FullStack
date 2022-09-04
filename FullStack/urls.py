@@ -27,6 +27,7 @@ urlpatterns = [
     path('hello-webpack/', TemplateView.as_view(template_name='hello_webpack.html')),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('questionapi/', include('question_detail.urls')),
     path('', include('question_list.urls')),
 
 ]
