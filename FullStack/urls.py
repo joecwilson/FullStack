@@ -16,10 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
+from rest_framework import routers
+from question_list import views
 
+
+router = routers.DefaultRouter()
+router.register(r'questionList', views.QuestionListAPI, 'questionList')
 
 urlpatterns = [
     path('hello-webpack/', TemplateView.as_view(template_name='hello_webpack.html')),
     path('admin/', admin.site.urls),
-    path('', include('question_list.urls'))
+    path('api/', include(router.urls)),
+    path('', include('question_list.urls')),
+
 ]

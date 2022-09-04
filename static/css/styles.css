@@ -1,11 +1,11 @@
 html {
-  font-size:16pt;
+    font-size: 16pt;
     background-color: #1b1b1b;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 .logo {
@@ -30,7 +30,7 @@ html {
     margin: 0.5rem;
     padding: 0.5rem;
     text-align: center;
-    color:white;
+    color: white;
 }
 
 h1 {
@@ -40,8 +40,16 @@ h1 {
 
 button {
     background-color: #2B526D;
-    color:white;
-    border:none;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem
+}
+
+a {
+    background-color: #2B526D;
+    color: white;
+    border: none;
     font-size: 1rem;
     padding: 0.5rem
 }
