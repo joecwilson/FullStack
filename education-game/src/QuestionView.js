@@ -43,10 +43,10 @@ function QuestionView(props) {
         </form>
         {(props.question.visible === 2) ? <img
             src={correctLogo}
-            className="max-h-10 m-5 ml-18"
+            className="answerIcon"
             alt="You got the answer correct"/> : (props.question.visible === 1) ? <img
             src={incorrectLogo}
-            className="max-h-10 m-5 ml-18"
+            className="answerIcon"
             alt="You got the answer incorrect"/> : <p className="text-white">Not Completed Yet</p>}
     </div>);
 };
