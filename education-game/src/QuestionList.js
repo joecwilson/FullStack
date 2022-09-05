@@ -20,7 +20,8 @@ class QuestionList extends React.Component {
 
     async componentDidMount() {
         try {
-            const res = await fetch('http://localhost:8000/api/1/');
+            const questionNum = window.location.pathname.split('/')[1];
+            const res = await fetch('http://localhost:8000/api/' + questionNum + '/');
             const questionAPIResult = await res.json();
 
             this.setState({
