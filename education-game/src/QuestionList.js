@@ -80,7 +80,6 @@ class QuestionList extends React.Component {
                 <p>
                     {this.state.description}
                 </p>
-
                 {this.getOnlyVisible().map((question) =>
                     <div className="col-span-3 col-start-2 rounded-md bg-slate-400 p-4 dark:bg-stone-800"
                          key={question.id}>
