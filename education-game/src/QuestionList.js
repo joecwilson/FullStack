@@ -73,15 +73,18 @@ class QuestionList extends React.Component {
     render() {
         return (
 
-            <div className="grid grid-cols-5 gap-5">
-                <h1 className="col-span-3 col-start-2 dark:text-white text-5xl text-center py-5">
-                    {this.state.title}
-                </h1>
-                <p>
-                    {this.state.description}
-                </p>
+            <div className="grid-container">
+                <div className="introduction">
+                    <h1 className="title">
+                        {this.state.title}
+                    </h1>
+                    <p className="description">
+                        {this.state.description}
+                    </p>
+                </div>
+
                 {this.getOnlyVisible().map((question) =>
-                    <div className="col-span-3 col-start-2 rounded-md bg-slate-400 p-4 dark:bg-stone-800"
+                    <div className="question"
                          key={question.id}>
                         <QuestionView
                             question={question}

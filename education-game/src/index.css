@@ -1,3 +1,52 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html {
+    font-size: 16pt;
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.introduction {
+    grid-column: 2 / span 2;
+    background-color: #333;
+    padding: 3rem 1rem 3rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.question {
+    grid-column: 2 / span 2;
+    background-color: #333;
+    padding: 3rem 1rem 3rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type = number] {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #2B526D;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem
+}

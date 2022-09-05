@@ -2,6 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import correctLogo from './images/Correct.svg'
 import incorrectLogo from './images/Incorrect.svg'
+import './index.css'
 
 function QuestionView(props) {
     const [userAnswer, setUserAnswer] = useState(0);
@@ -9,9 +10,6 @@ function QuestionView(props) {
         event.preventDefault();
 
         const correctAnswerNum = parseFloat(props.question.answer);
-        // alert("You inputted:" + userAnswer + " the correct answer was " + correctAnswerNum +
-        //     "the type of your answer was " + typeof (userAnswer) + "the type of the correct answer was " +
-        //     typeof (correctAnswerNum));
         if ((userAnswer >= correctAnswerNum * 0.99) && (userAnswer <= correctAnswerNum * 1.01)) {
             props.onCorrectChange(2, props.question.id);
         } else {
@@ -20,11 +18,11 @@ function QuestionView(props) {
     }
 
     return (<div className="container mx-auto">
-        <div className="mb-4 text-center">
-            <div className="block text-gray-700 text-sm font-bold mb-2 dark:text-white">
+        <div>
+            <div>
                 Question
             </div>
-            <div className="dark:text-white">
+            <div>
                 <p>
                     {props.question.text}
                 </p>
