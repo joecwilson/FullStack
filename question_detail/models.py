@@ -7,7 +7,7 @@ class Question(models.Model):
     answer = models.DecimalField(decimal_places=3, max_digits=13)
     question_group = models.ForeignKey(QuestionList, related_name='question_rel', on_delete=models.CASCADE)
     position = models.IntegerField()
-    default_visibility = models.IntegerField()
+    visible = models.IntegerField()
 
     def __str__(self):
         return self.text
