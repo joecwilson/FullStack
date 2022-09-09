@@ -29,16 +29,17 @@ function QuestionView(props) {
             </div>
         </div>
         <form className="mb-6 text-center" onSubmit={handleSubmit}>
-            <label className="block text-gray-700 text-sm font-bold mb-2 dark:text-white">
+            <label className="test">
                 Answer
             </label>
             <input
-                className="shadow appearance-none border border-blue-500 rounded w-5/6 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline mx-8"
+                className="test"
                 id="answer"
                 type="number"
                 placeholder="0"
                 value={userAnswer}
-                onChange={(e) => setUserAnswer(parseFloat(e.target.value))}/>
+                onChange={(e) => setUserAnswer(parseFloat(e.target.value))}
+                disabled={props.question.visible === 2}/>
             <button type="submit"> Submit</button>
         </form>
         {(props.question.visible === 2) ? <img
