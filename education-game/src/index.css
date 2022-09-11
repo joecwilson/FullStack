@@ -73,10 +73,6 @@ button {
     button {
         background-color: hsl(85, 90%, 30%);
     }
-
-    input[type = button], input[type = submit] , input[type = reset]{
-        background-color: #04AA6D;
-    }
 }
 
 @media (prefers-color-scheme: light) {

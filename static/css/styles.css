@@ -1,3 +1,8 @@
+html {
+    font-size: 16pt;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -14,9 +19,9 @@
 
 .title {
     grid-column: 2 / span 2;
-
-    padding: 3rem 0 3rem 0;
-    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -24,25 +29,15 @@
     margin: 0.5rem;
     padding: 1rem;
     text-align: center;
-    color: white;
+    border-width: thick;
+    border-style: solid;
 }
 
 h1 {
-    color: #AA5A3C;
     text-align: center;
 }
 
-button {
-    background-color: #2B526D;
-    color: white;
-    border: none;
-    font-size: 1rem;
-    padding: 0.5rem
-}
-
-a {
-    background-color: #2B526D;
-    color: white;
+a, button {
     border: none;
     font-size: 1rem;
     padding: 0.5rem
@@ -53,16 +48,45 @@ a {
         background-color: #1b1b1b;
         color: white;
     }
+
+    .card, .title {
+        background-color: hsl(205, 60%, 15%);
+        border-color: hsl(205, 90%, 25%);
+    }
+
+    button, a {
+        background-color: hsl(85, 90%, 30%);
+        color: white;
+    }
+
+    h1 {
+        color: hsl(325, 60%, 50%);
+    }
+
 }
 
 @media (prefers-color-scheme: light) {
     html {
-        background-color: hsl(40, 80%, 90%);
+        background-color: hsl(325, 5%, 95%);
         color: black;
     }
 
     .card, .title {
-        background-color: hsl(204, 20%, 50%);
+        background-color: hsl(205, 30%, 75%);
+        border-color: hsl(205, 45%, 65%);
+    }
+
+    .logo {
+        color: hsl(325, 75%, 75%);
+    }
+
+    button, a {
+        background-color: hsl(85, 90%, 30%);
+        color: black;
+    }
+
+    h1 {
+        color: hsl(325, 60%, 50%);
     }
 
 }
