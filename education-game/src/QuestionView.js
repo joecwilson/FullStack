@@ -17,7 +17,7 @@ function QuestionView(props) {
         }
     }
 
-    return (<div className="container mx-auto">
+    return (<div className="">
         <div>
             <div>
                 Question
@@ -28,7 +28,7 @@ function QuestionView(props) {
                 </p>
             </div>
         </div>
-        <form className="mb-6 text-center" onSubmit={handleSubmit}>
+        <form className="" onSubmit={handleSubmit}>
             <label className="test">
                 Answer
             </label>

@@ -6,7 +6,7 @@ import './index.css'
 class App extends Component {
     render() {
         return (
-            <div className="dark:bg-stone-900 min-h-screen">
+            <div className="">
                 <QuestionList/>
                 <Footer/>
             </div>
