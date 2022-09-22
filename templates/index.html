@@ -1,41 +1,36 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
+    <meta charset="UTF-8">
     <title>Question Group View</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <div class = "grid-container">
-        <div class = "logo">
-            Logo goes Here
+<div class="grid-container">
+    <img src="{% static 'images/Logo.svg' %}" alt = "The logo" class = "logo"/>
+    <h1 class="title">
+        Full Stack Project
+    </h1>
+    {% for object in object_list %}
+        <div class="card">
+            <h2>
+                {{ object.title }}
+            </h2>
+            <p>
+                {{ object.description }}
+            </p>
+            <a href="{% url 'react' object.pk %}">
+                Do this group
+            </a>
         </div>
-        <h1 class = "title">
-            Full Stack Project
-        </h1>
-        <div>
-
+    {% empty %}
+        <div class="card">
+            <p>
+                nothing found
+            </p>
         </div>
-        {% for object in object_list %}
-            <div class="card">
-                <h2>
-                    {{object.title}}
-                </h2>
-                <p>
-                    {{ object.description }}
-                </p>
-                <a href="{% url 'react' object.pk %}">
-                    Do this group
-                </a>
-            </div>
-        {% empty %}
-            <div class = "card">
-                <p>
-                    nothing found
-                </p>
-            </div>
-        {% endfor %}
-    </div>
+    {% endfor %}
+</div>
 </body>
 </html>
