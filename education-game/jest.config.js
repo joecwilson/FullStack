@@ -7,5 +7,12 @@ module.exports = {
     roots: [
         '<rootDir>/education-game/src/__tests__/*.test.js'
     ],
+    preset: 'ts-jest',
+    testEnvironment: 'node',
+    transform: {
+        '^.+\\.ts?$': 'ts-jest',
+        "^.+\\.(js|jsx)$": "babel-jest",
+    },
+    transformIgnorePatterns: ['./node_modules/'],
 
 }
