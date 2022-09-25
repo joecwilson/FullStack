@@ -22,7 +22,7 @@ html {
     align-items: center;
 }
 
-.card, .title{
+.card, .title {
     border-radius: 1rem;
     margin: 0.5rem;
     padding: 1rem;
@@ -39,7 +39,29 @@ a, button {
     font-size: 1rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    text-align: center;
 }
+
+.buttonPanel {
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    grid-template-columns: 50% 50%;
+    margin: 0.5rem;
+}
+
+.loginButton {
+    margin: auto;
+    width: 5rem;
+    height: 3rem;
+}
+
+.loginButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
     html {
@@ -63,6 +85,7 @@ a, button {
     }
 
 }
+
 /* Light Mode */
 @media (prefers-color-scheme: light) {
     html {
@@ -88,27 +111,33 @@ a, button {
         color: hsl(325, 60%, 50%);
     }
 }
+
 /* Desktop */
-@media not print and (min-aspect-ratio: 1/1){
-    .grid-container{
+@media not print and (min-aspect-ratio: 1/1) {
+    .grid-container {
         grid-template-columns: 25% 25% 25% 25%;
     }
+
     .title {
         grid-column: 2 / span 2;
     }
+
     .card {
         grid-column: auto;
     }
 }
+
 /* Mobile and print */
 @media (max-aspect-ratio: 1/1) {
-    .grid-container{
+    .grid-container {
         grid-template-columns: 10% 80% 10%;
     }
+
     .title, .card {
         grid-column: 2;
         padding: 2rem;
     }
+
     button, a {
         padding: 1rem;
     }

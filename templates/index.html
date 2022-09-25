@@ -12,7 +12,30 @@
     <h1 class="title">
         Full Stack Project
     </h1>
-    <div></div>
+    <div class="buttonPanel">
+        <div class="loginButtonContainer">
+            <a href="\" class="loginButton">
+                Log in
+            </a>
+        </div>
+        <div class="loginButtonContainer">
+            <a href="\" class="loginButton">
+                Sign Up
+            </a>
+        </div>
+        <div class="loginButtonContainer">
+            <a href="\" class="loginButton">
+                Log out
+            </a>
+        </div>
+        <div class="loginButtonContainer">
+            <a href="{% url 'admin:index' %}" class="loginButton">
+                Admin
+            </a>
+        </div>
+
+
+    </div>
     {% for object in object_list %}
         <div class="card">
             <h2>
