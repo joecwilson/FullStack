@@ -100,7 +100,7 @@ a, button {
         grid-column: auto;
     }
 }
-/* Mobile */
+/* Mobile and print */
 @media (max-aspect-ratio: 1/1) {
     .grid-container{
         grid-template-columns: 10% 80% 10%;
@@ -111,6 +111,5 @@ a, button {
     }
     button, a {
         padding: 1rem;
-
     }
 }
