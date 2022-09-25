@@ -15,13 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic.base import TemplateView
-
-
-
 
 urlpatterns = [
-    path('hello-webpack/', TemplateView.as_view(template_name='hello_webpack.html')),
     path('admin/', admin.site.urls),
     path('api/', include('question_list.api_urls')),
     path('', include('question_list.urls'))

@@ -1,6 +1,11 @@
 from rest_framework import serializers
-from .models import QuestionList
-from question_detail.serializers import QuestionSerializer
+from .models import QuestionList, Question
+
+
+class QuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Question
+        fields = ('id', 'text', 'answer', 'position', 'visible')
 
 
 class QuestionListSerializer(serializers.ModelSerializer):
