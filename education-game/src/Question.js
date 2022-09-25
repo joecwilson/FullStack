@@ -1,4 +1,3 @@
-
 exports.__esModule = true;
 var Question = /** @class */ (function () {
     function Question(id, question_text, answer, visible) {
@@ -7,6 +6,7 @@ var Question = /** @class */ (function () {
         this.answer = answer;
         this.visible = visible;
     }
+
     return Question;
 }());
 exports["default"] = Question;

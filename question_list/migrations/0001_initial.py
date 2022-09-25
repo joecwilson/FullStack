@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -32,7 +31,9 @@ class Migration(migrations.Migration):
                 ('answer', models.DecimalField(decimal_places=3, max_digits=13)),
                 ('position', models.IntegerField()),
                 ('visible', models.IntegerField()),
-                ('question_group', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='question_rel', to='question_list.questionlist')),
+                ('question_group',
+                 models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='question_rel',
+                                   to='question_list.questionlist')),
             ],
         ),
     ]
