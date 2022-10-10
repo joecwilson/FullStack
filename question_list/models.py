@@ -1,4 +1,6 @@
+from django.conf import settings
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 class QuestionList(models.Model):
@@ -6,7 +8,7 @@ class QuestionList(models.Model):
     description = models.CharField(max_length=1500)
     creation_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
-        "auth.User",
+        settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
 
