@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Question Group View</title>
+    <title>FullStack</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
@@ -14,12 +14,12 @@
     </h1>
     <div class="buttonPanel">
         <div class="loginButtonContainer">
-            <a href="\" class="loginButton">
+            <a href="{% url 'login' %}" class="loginButton">
                 Log in
             </a>
         </div>
         <div class="loginButtonContainer">
-            <a href="\" class="loginButton">
+            <a href="{% url 'signup' %}" class="loginButton">
                 Sign Up
             </a>
         </div>
