@@ -133,3 +133,5 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+LOGOUT_REDIRECT_URL = "/"
