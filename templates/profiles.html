@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FullStack</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="grid-container">
+    <img src="{% static 'images/Logo.svg' %}" alt="The logo" class="logo"/>
+    <h1 class="title">
+        {{user.username}}'s Profile 
+    </h1>
+    <div class="buttonPanel">
+        <div class="loginButtonContainer">
+            <a href= "{% url 'logout' %}" class="loginButton">
+                Log out
+            </a>
+        </div>
+        <div class="loginButtonContainer">
+            <a href= "{% url 'profile' %}" class="loginButton">
+                See Home
+            </a>
+        </div>
+        {% if user.is_superuser %}
+        <div class="loginButtonContainer">
+            <a href="{% url 'admin:index' %}" class="loginButton">
+                Admin
+            </a>
+        </div>
+        {% endif %}
+
+    </div>
+    {% for object in object_list %}
+        <div class="card">
+            <h2>
+                {{ object.title }}
+            </h2>
+            <p>
+                {{ object.description }}
+            </p>
+            <a href="{% url 'react' object.pk %}">
+                Do this group
+            </a>
+        </div>
+    {% empty %}
+        <div class="centralPadding"></div>
+        <p class="centralMessage">
+            Nothing here yet. Why not make your own?
+        </p>
+    {% endfor %}
+</div>
+</body>
+</html>

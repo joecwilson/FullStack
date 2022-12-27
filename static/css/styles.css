@@ -10,7 +10,6 @@ html {
 .logo {
     width: 4rem;
     height: 4rem;
-    border: 1px solid white;
     padding: 0;
     margin: 3rem auto 3rem auto;
     color: #AA8E3C;
@@ -62,6 +61,13 @@ a, button {
     align-items: center;
 }
 
+.centralMessage {
+    margin: auto;
+    width: 20rem;
+    height: 7rem;
+    text-align: center;
+}
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
     html {
@@ -69,7 +75,7 @@ a, button {
         color: white;
     }
 
-    .card, .title {
+    .card, .title, .centralMessage{
         background-color: hsl(205, 60%, 15%);
         border-color: hsl(205, 90%, 25%);
     }
@@ -93,7 +99,7 @@ a, button {
         color: black;
     }
 
-    .card, .title {
+    .card, .title, .centralMessage {
         background-color: hsl(205, 30%, 75%);
         border-color: hsl(205, 45%, 65%);
     }
@@ -125,6 +131,13 @@ a, button {
     .card {
         grid-column: auto;
     }
+    .centralMessage, .centralPadding {
+        grid-column: 2 / span 2;
+    }
+
+    .centralPadding {
+        height: 5rem;
+    }
 }
 
 /* Mobile and print */
@@ -140,5 +153,10 @@ a, button {
 
     button, a {
         padding: 1rem;
+    }
+
+    .centralMessage {
+        grid-column: 2;
+        padding: 2rem;
     }
 }

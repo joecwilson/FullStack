@@ -13,7 +13,7 @@ class SignUpView(CreateView):
 
 class ProfileView(ListView):
     model = QuestionList
-    template_name = 'index.html'
+    template_name = 'profiles.html'
 
     def get_queryset(self):
         return QuestionList.objects.filter(author=self.request.user)
