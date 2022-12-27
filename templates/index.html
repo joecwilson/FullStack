@@ -13,6 +13,26 @@
         Full Stack Project
     </h1>
     <div class="buttonPanel">
+        {% if user.is_authenticated %}
+        <div class="loginButtonContainer">
+            <a href= "{% url 'logout' %}" class="loginButton">
+                Log out
+            </a>
+        </div>
+        <div class="loginButtonContainer">
+            <a href= "{% url 'profile' %}" class="loginButton">
+                See Profile
+            </a>
+        </div>
+        {% if user.is_superuser %}
+        <div class="loginButtonContainer">
+            <a href="{% url 'admin:index' %}" class="loginButton">
+                Admin
+            </a>
+        </div>
+        {% endif %}
+
+        {% else %}
         <div class="loginButtonContainer">
             <a href="{% url 'login' %}" class="loginButton">
                 Log in
@@ -23,17 +43,7 @@
                 Sign Up
             </a>
         </div>
-        <div class="loginButtonContainer">
-            <a href="\" class="loginButton">
-                Log out
-            </a>
-        </div>
-        <div class="loginButtonContainer">
-            <a href="{% url 'admin:index' %}" class="loginButton">
-                Admin
-            </a>
-        </div>
-
+        {% endif %}
 
     </div>
     {% for object in object_list %}
