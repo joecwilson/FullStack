@@ -23,6 +23,11 @@
                 See Home
             </a>
         </div>
+        <div class="loginButtonContainer">
+            <a href= "{% url 'new question' %}" class="loginButton">
+                Create Question
+            </a>
+        </div>
         {% if user.is_superuser %}
         <div class="loginButtonContainer">
             <a href="{% url 'admin:index' %}" class="loginButton">
