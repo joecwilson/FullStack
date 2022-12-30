@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div class="loginButtonContainer">
-                <a href= "{% url 'profile' %}" class="loginButton">
+                <a href= "{% url 'account:profile' %}" class="loginButton">
                     See Profile
                 </a>
             </div>
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <div class="loginButtonContainer">
-                <a href="{% url 'signup' %}" class="loginButton">
+                <a href="{% url 'account:signup' %}" class="loginButton">
                     Sign Up
                 </a>
             </div>
@@ -54,7 +54,7 @@
             <p>
                 {{ object.description }}
             </p>
-            <a href="{% url 'react' object.pk %}">
+            <a href="{% url 'question_list:react' object.pk %}">
                 Do this group
             </a>
         </div>

@@ -19,12 +19,12 @@
             </a>
         </div>
         <div class="loginButtonContainer">
-            <a href= "{% url 'home' %}" class="loginButton">
+            <a href= "{% url 'question_list:home' %}" class="loginButton">
                 See Home
             </a>
         </div>
         <div class="loginButtonContainer">
-            <a href= "{% url 'new question' %}" class="loginButton">
+            <a href= "{% url 'question_list:new group' %}" class="loginButton">
                 Create Question
             </a>
         </div>
@@ -45,8 +45,11 @@
             <p>
                 {{ object.description }}
             </p>
-            <a href="{% url 'react' object.pk %}">
+            <a href="{% url 'question_list:react' object.pk %}">
                 Do this group
+            </a>
+            <a href="{% url 'question_list:react' object.pk %}">
+                Edit Questions 
             </a>
         </div>
     {% empty %}
